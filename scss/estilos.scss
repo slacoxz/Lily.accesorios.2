@@ -1,8 +1,7 @@
-@import '../node_modules/bootstrap/scss/bootstrap';
 
 
 // Variables
-$primary-color: #ffff;
+$primary-color: #36454F;
 $hover-color: #a28d7c;
 $dark-bg: #343a40;
 $footer-bg: #36454F;
@@ -48,8 +47,6 @@ $header-text-color: #fff;
 
 // General Styles
 body {
-  background-color: $background-color;
-  color: $text-color;
   height: 100vh;
   @include fade-in(1s);
   font-family: 'Arial', sans-serif;
@@ -71,13 +68,6 @@ header, footer {
   color: #ffffff;
 }
 
-a {
-  color: $highlight-color;
-}
-
-a:hover {
-  color: $hover-highlight-color;
-}
 
 // Header Styles
 header {
@@ -91,7 +81,6 @@ header {
     flex: 1;
     display: flex;
     justify-content: space-between;
-    background-color: $primary-color;
 
     .nav-item {
       flex: 1;
@@ -104,11 +93,7 @@ header {
         transition: color 0.3s, transform 0.3s;
         padding: 10px;
         @include hover-scale(0.3s);
-        color: #ffffff !important;
-
-        &:hover {
-          color: $highlight-color;
-        }
+        color: #ffffff;
       }
     }
   }
@@ -132,10 +117,10 @@ header {
       background-image: none;
 
       &::before {
-        content: '\f0c9'; // Font Awesome bars icon
+        content: '\f0c9';
         font-family: 'Font Awesome 5 Free';
         font-weight: 900;
-        color: #ffffff;
+        color:#a28d7c;
       }
     }
   }
@@ -228,7 +213,6 @@ main {
         font-family: "Cactus Classical Serif", serif;
         font-weight: 300;
         font-size: 1.2rem;
-        color: $text-color;
         text-align: center;
         margin-top: 5px;
         animation: fadeIn 1s ease-in-out;
@@ -298,18 +282,16 @@ footer {
   .footerinfo {
     font-family: "Cactus Classical Serif", serif;
     font-weight: 300;
-    color: $background-color;
     font-size: 1.2rem;
     margin-bottom: 10px;
     animation: fadeIn 1s ease-in-out;
+    color: $footer-text-color;
 
     a {
-      color: $background-color;
       transition: color 0.3s, transform 0.3s;
     }
 
     a:hover {
-      color: $background-color;
       transform: scale(1.1);
     }
   }
@@ -323,7 +305,6 @@ footer {
   }
 
   .btn-primary {
-    background-color: $highlight-color;
     color: #ffffff;
     padding: 0.5rem 1rem;
     border: none;
@@ -332,13 +313,11 @@ footer {
     transition: background-color 0.3s, transform 0.3s;
 
     &:hover {
-      background-color: $hover-highlight-color;
       transform: scale(1.05);
     }
   }
 
   .container-footer {
-    background-color: $primary-color;
     display: grid;
     text-align: center;
     align-items: center;
